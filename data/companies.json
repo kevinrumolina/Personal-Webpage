@@ -1,0 +1,49 @@
+{
+    "companies": [
+        {
+            "name": "Marfeel",
+            "title": "JavaScript Engineer",
+            "dates": "December 2019 - August 2021 | Sep 2023 - Present",
+            "tasks": [
+                "Maintained and updated multiple client websites, ensuring functionality and reliability.",
+                "Developed custom software solutions using SASS preprocessor, semantic HTML, and Vanilla JavaScript to meet diverse client requirements.",
+                "Built and integrated widgets and ad servers utilizing an internal framework with JavaScript, React and TypeScript.",
+                "Contributed to the Reliability Chapter, analyzing product integrity and stability to identify and propose solutions that minimize impact on clients.",
+                "Followed Agile methodologies such as Kanban, to ensure continuous delivery to different clients."
+            ]
+        },
+        {
+            "name": "EPAM",
+            "title": "Software Engineer",
+            "dates": "April 2022 - August 2023",
+            "tasks": [
+                "Developed and maintained the shopping microsite for Copa Airlines using React and Redux.",
+                "Created, updated and optimized React components.",
+                "Integrated external APIs to enhance platform features and improve user experience.",
+                "Collaborated with a cross-functional team, conducting code reviews and ensuring high-quality code through peer review processes.",
+                "Implemented continuous integration using Azure DevOps.",
+                "Worked with AWS for cloud infrastructure and deployments.",
+                "Applied Agile methodologies as Scrum, to optimize development workflows."
+            ]
+        },
+        {
+            "name": "Huge Inc.",
+            "title": "Associate Engineer",
+            "dates": "August 2021 - April 2022",
+            "tasks": [
+                "Worked in advertising production using HTML, SCSS and Vanilla Javascript using Greenstock library for animations.",
+                "Implemented new features on automation internal tools in order to optimize work using React, Typescript and Vanilla Javascript.",
+                "Conducted code reviews and collaborated with a multi-disciplinary team.",
+                "Deployed advertisements in google Doubleclick Studio."
+            ]
+        },
+        {
+            "name": "Acámica",
+            "title": "Mentor",
+            "dates": "November 2020 - June 2021",
+            "tasks": [
+                "Provided guidance and instruction to students pursuing FrontEnd and FullStack careers during their initial course sprint focusing on HTML and CSS. Each course typically comprises a class size of 10-20 students."
+            ]
+        }
+    ]
+}
