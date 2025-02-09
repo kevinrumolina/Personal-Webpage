@@ -55,7 +55,11 @@ const companiesData = async() => {
         li.addEventListener("click", () => {
             resetGrey(document.querySelectorAll('.list-item'));
             setPink(li);
-            companyContainer.scroll({left: index * 125, behavior: "smooth"})
+            if(index < 2) {
+                companyContainer.scroll({left: 0, behavior: "smooth"})
+            } else {
+                companyContainer.scroll({left: 500, behavior: "smooth"})
+            }
             parentDescription.innerHTML = "";
 
             const [ company ] = companies.filter(company => company.name == li.innerText)

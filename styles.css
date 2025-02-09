@@ -25,17 +25,31 @@ ul {
 .scroll {
   width: 200px;
   height: 50px;
-  background-color: #202020;
-  color: #9EFF00;
+  background-color: #F8F8F8;
+  color: #0F0F0F;
+  opacity: 0.7;
   font-size: 1rem;
   position: fixed;
   line-height: 50px;
   text-align: center;
-  border-radius: 25px;
-  border: 1px solid #FF0073;
+  font-weight: 700;
   bottom: 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   left: calc(50vw - 100px);
   z-index: 1;
+}
+.scroll::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #9EFF00;
+  border-top: 2px solid #9EFF00;
+  position: absolute;
+  bottom: 5px;
+  left: 95px;
+  transform: rotate(-135deg);
 }
 .scroll.up {
   top: 0;
@@ -174,11 +188,21 @@ header.container {
   min-height: -moz-fit-content;
   min-height: fit-content;
 }
-header.container [src*=blur] {
+header.container .pattern {
+  background: url(./assets/hero-pattern.png);
+}
+header.container .blur {
+  background: url(./assets/blur.png);
+}
+header.container .blur, header.container .pattern {
   position: absolute;
   width: 100%;
-  opacity: 0.5;
   height: 100vh;
+  background-position: center;
+}
+header.container .hero-title, header.container [src*=hero-image] {
+  position: relative;
+  z-index: 1;
 }
 header.container .button {
   background-color: #9EFF00;
@@ -201,10 +225,19 @@ header, footer {
 }
 
 .companies {
-  height: 100vh;
   padding: 65px 16px;
-  background-color: #0F0F0F;
+  background-color: #202020;
   color: #9EFF00;
+  position: relative;
+}
+.companies .subtitle {
+  position: absolute;
+  top: -25px;
+  font-size: 1rem;
+  background-color: #0F0F0F;
+  padding: 14px 24px;
+  border-radius: 25px;
+  color: #F8F8F8;
 }
 .companies-box {
   display: flex;
@@ -212,7 +245,6 @@ header, footer {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 25px;
-  gap: 16px;
   height: 100%;
 }
 
