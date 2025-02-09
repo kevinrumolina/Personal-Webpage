@@ -48,10 +48,14 @@ const companiesData = async() => {
 
     setPink(document.querySelector('.list-item'));
 
-    document.querySelectorAll('.list-item').forEach(li => {
+    const companyList = document.querySelectorAll('.list-item');
+    const companyContainer = document.querySelector('.company-list')
+
+    companyList.forEach((li, index) => {
         li.addEventListener("click", () => {
             resetGrey(document.querySelectorAll('.list-item'));
             setPink(li);
+            companyContainer.scroll({left: index * 125, behavior: "smooth"})
             parentDescription.innerHTML = "";
 
             const [ company ] = companies.filter(company => company.name == li.innerText)
