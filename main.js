@@ -73,5 +73,15 @@ const addCloseMenuEvent = () => {
     })
 }
 
+const scrollButton = document.querySelector('.scroll.down');
+
+scrollButton.addEventListener('click', () => {
+    const screenHeight = window.innerHeight;
+    const currentYPosition = window.scrollY;
+    const newYposition = currentYPosition + screenHeight;
+
+    window.scroll({top: newYposition, behavior: "smooth"});
+})
+
 companiesData();
 addCloseMenuEvent();
