@@ -86,7 +86,7 @@ const scrollButton = document.querySelector('.scroll.down');
 scrollButton.addEventListener('click', () => {
     const screenHeight = window.innerHeight;
     const currentYPosition = window.scrollY;
-    const newYposition = currentYPosition + screenHeight;
+    const newYposition = currentYPosition + screenHeight - 80;
 
     window.scroll({top: newYposition, behavior: "smooth"});
 })

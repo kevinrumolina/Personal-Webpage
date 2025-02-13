@@ -16,6 +16,7 @@ html {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -44,12 +45,21 @@ ul {
   content: " ";
   width: 10px;
   height: 10px;
-  border-left: 2px solid #9EFF00;
-  border-top: 2px solid #9EFF00;
+  border-left: 2px solid #DBFF00;
+  border-top: 2px solid #DBFF00;
   position: absolute;
   bottom: 5px;
   left: 95px;
   transform: rotate(-135deg);
+}
+.scroll::after {
+  display: block;
+  content: "Scroll Down";
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: 50px;
 }
 .scroll.up {
   top: 0;
@@ -73,7 +83,7 @@ ul {
   display: block;
   height: 10%;
   width: 75%;
-  background-color: #9EFF00;
+  background-color: #DBFF00;
   border-radius: 10px;
   transition: all 0.2s ease;
   position: absolute;
@@ -110,7 +120,7 @@ ul {
 .mobile-menu .menu {
   width: 100%;
   margin-top: 65px;
-  background-color: #9EFF00;
+  background-color: #DBFF00;
   cursor: pointer;
   position: fixed;
   top: 0;
@@ -135,7 +145,7 @@ ul {
   background-color: #202020;
 }
 .mobile-menu .menu li:hover a {
-  color: #9EFF00;
+  color: #DBFF00;
 }
 .mobile-menu .menu li a {
   display: block;
@@ -154,7 +164,7 @@ ul {
   width: 100vw;
   background-color: #202020;
   height: 80px;
-  border-bottom: 1px solid #9EFF00;
+  border-bottom: 1px solid #DBFF00;
 }
 .desktop-menu .menu ul {
   display: flex;
@@ -171,14 +181,13 @@ ul {
 }
 .desktop-menu .menu a:hover {
   color: #202020;
-  background-color: #9EFF00;
+  background-color: #DBFF00;
 }
 
 header.container {
   height: 100vh;
   margin-top: -65px;
   padding: 50px 0;
-  text-align: center;
   justify-content: space-around;
   background-color: #202020;
   color: #F8F8F8;
@@ -203,9 +212,11 @@ header.container .blur, header.container .pattern {
 header.container .hero-title, header.container [src*=hero-image] {
   position: relative;
   z-index: 1;
+  font-weight: 500;
+  line-height: 70px;
 }
 header.container .button {
-  background-color: #9EFF00;
+  background-color: #DBFF00;
   width: 112px;
 }
 
@@ -227,7 +238,7 @@ header, footer {
 .companies {
   padding: 65px 16px;
   background-color: #202020;
-  color: #9EFF00;
+  color: #DBFF00;
   position: relative;
 }
 .companies .subtitle {
@@ -273,7 +284,7 @@ header, footer {
 }
 .skills .paths-container .path-title {
   font-size: 2.25rem;
-  color: #9EFF00;
+  color: #DBFF00;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -283,12 +294,12 @@ header, footer {
   margin-bottom: 50px;
 }
 .skills .paths-container .path-list li::marker {
-  color: #9EFF00;
+  color: #DBFF00;
 }
 
 .work {
   padding: 65px 16px;
-  background-color: #9EFF00;
+  background-color: #DBFF00;
   color: #0F0F0F;
 }
 .work .company-list {
@@ -338,6 +349,55 @@ header, footer {
   color: #FF0073;
 }
 
+.projects {
+  padding: 65px 16px;
+}
+.projects .subtitle {
+  margin-bottom: 10px;
+}
+.projects .projects-box {
+  margin-top: 85px;
+}
+.projects .projects-box .project {
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+.projects .projects-box .project:nth-child(2n) .project-title {
+  background-color: #FF0073;
+  color: #F8F8F8;
+}
+.projects .projects-box .project-title {
+  background-color: #DBFF00;
+  padding: 24px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid #202020;
+  border-radius: 50px;
+}
+.projects .projects-box .project-box {
+  padding: 0 40px;
+}
+.projects .projects-box .project-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 24px auto;
+  border-radius: 5px;
+}
+.projects .projects-box .project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.projects .projects-box .project-subtitle {
+  background-color: #202020;
+  padding: 10px;
+  color: #F8F8F8;
+  border-radius: 5px;
+}
+
 footer {
   background: #0F0F0F;
   color: #E6E6E6;
@@ -368,7 +428,7 @@ footer .contact div a {
 }
 
 .brand-color {
-  color: #9EFF00;
+  color: #DBFF00;
 }
 
 .secondary-color {
@@ -392,7 +452,7 @@ footer .contact div a {
 }
 
 .brand-text {
-  color: #9EFF00;
+  color: #DBFF00;
 }
 
 .container {
@@ -482,6 +542,9 @@ footer .contact div a {
     flex-direction: column;
     font-size: 6rem;
   }
+  header.container .hero-title {
+    line-height: 100px;
+  }
   header.container [src*=hero] {
     width: 500px;
     height: 500px;
@@ -491,8 +554,31 @@ footer .contact div a {
   header.container {
     font-size: 6rem;
   }
+  header.container .hero-title {
+    line-height: 100px;
+  }
   header.container [src*=hero] {
     width: 500px;
     height: 500px;
+  }
+  .projects-box {
+    display: flex;
+    justify-content: center;
+  }
+  .projects .project {
+    width: 45%;
+  }
+  .projects .project:nth-child(2n) {
+    border-left: 1px solid #202020;
+  }
+  .projects .project:nth-child(2n) .project-title {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+  }
+  .projects .project:nth-child(2n+1) .project-title {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
   }
 }/*# sourceMappingURL=styles.css.map */
